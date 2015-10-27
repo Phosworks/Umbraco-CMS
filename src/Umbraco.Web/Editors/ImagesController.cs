@@ -160,15 +160,9 @@ namespace Umbraco.Web.Editors
                     }
                 }
             }
-
-            var result = Request.CreateResponse(HttpStatusCode.OK);
-            //NOTE: That we are not closing this stream as the framework will do that for us, if we try it will
-            // fail. See http://stackoverflow.com/questions/9541351/returning-binary-file-from-controller-in-asp-net-web-api
-            var stream = mediaFileSystem.OpenFile(fullNewPath);
-            if (stream.CanSeek) stream.Seek(0, 0);
-            result.Content = new StreamContent(stream);
-            result.Headers.Date = mediaFileSystem.GetLastModified(imagePath);
-            result.Content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
+            var relativeNewPath = string.Format( "/media/{0}", mediaFileSystem.GetRelativePath( fullNewPath ).Replace( '\\', '/' ) );
+            var result = Request.CreateResponse( HttpStatusCode.Found );
+            result.Headers.Location = new Uri( relativeNewPath, UriKind.Relative );
             return result;
         }
     }
