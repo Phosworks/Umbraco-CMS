@@ -68,7 +68,7 @@ function fileUploadController($scope, $element, $compile, imageHelper, fileManag
                         "GetBigThumbnail",
                         [{ originalImagePath: file.file }]);
 
-            file.thumbnail = thumbnailUrl;
+            file.thumbnail = thumbnailUrl + "&index=" + index;
         });
 
         $scope.clearFiles = false;
@@ -135,7 +135,7 @@ function fileUploadController($scope, $element, $compile, imageHelper, fileManag
             // has changed the value. There's only 2 scenarios where we change the value internall so 
             // we know what those values can be, if they are not either of them, then we'll re-initialize.
 
-            if (newVal.clearFiles !== true && newVal !== $scope.originalValue && !newVal.selectedFiles) {
+            if (newVal.clearFiles !== true && !newVal.selectedFiles) {
                 initialize($scope.rebuildInput.index + 1);
             }
 
