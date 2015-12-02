@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
+using Umbraco.Core.Events;
+using Umbraco.Core.Publishing;
 
 namespace Umbraco.Core.Models
 {
@@ -307,6 +309,11 @@ namespace Umbraco.Core.Models
         {
             Published = state == PublishedState.Published;
             PublishedState = state;
+            if (state == PublishedState.Published || state == PublishedState.Unpublished) {
+                var publishedContentChanged = new AtgMoetPublishedContentChangedEventArgs<IContent>( this );
+                publishedContentChanged.PublishedState = state;
+                AtgMoetPublishedContent.RaiseEvent( this, publishedContentChanged );
+            }
         }
 
         [DataMember]
