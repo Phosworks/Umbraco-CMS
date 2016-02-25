@@ -9,34 +9,10 @@ angular.module('umbraco.services')
         var lastServerTimeoutSet = null;
 
         function openLoginDialog(isTimedOut) {
-            if (!loginDialog) {
-                loginDialog = dialogService.open({
-
-                    //very special flag which means that global events cannot close this dialog
-                    manualClose: true,
-
-                    template: 'views/common/dialogs/login.html',
-                    modalClass: "login-overlay",
-                    animation: "slide",
-                    show: true,
-                    callback: onLoginDialogClose,
-                    dialogData: {
-                        isTimedOut: isTimedOut
-                    }
-                });
-            }
+            document.location = '/umbraco/Surface/Authorization/Index/' + (isTimedOut ? 'true' : 'false');
         }
 
         function onLoginDialogClose(success) {
-            loginDialog = null;
-
-            if (success) {
-                securityRetryQueue.retryAll();
-            }
-            else {
-                securityRetryQueue.cancelAll();
-                $location.path('/');
-            }
         }
 
         /** 
