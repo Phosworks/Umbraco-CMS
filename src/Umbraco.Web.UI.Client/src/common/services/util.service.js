@@ -618,17 +618,19 @@ function umbDataFormatter() {
                 return item.id === 0;
             });
             
-            var propExpireDate = _.find(genericTab.properties, function(item) {
-                return item.alias === "_umb_expiredate";
-            });
-            var propReleaseDate = _.find(genericTab.properties, function (item) {
-                return item.alias === "_umb_releasedate";
-            });
+            //Replaced with custom property editors
+            //var propExpireDate = _.find(genericTab.properties, function(item) {
+            //    return item.alias === "_umb_expiredate";
+            //});
+            //var propReleaseDate = _.find(genericTab.properties, function (item) {
+            //    return item.alias === "_umb_releasedate";
+            //});
             var propTemplate = _.find(genericTab.properties, function (item) {
                 return item.alias === "_umb_template";
             });
-            saveModel.expireDate = propExpireDate.value;
-            saveModel.releaseDate = propReleaseDate.value;
+            //Replaced with custom property editors
+            //saveModel.expireDate = propExpireDate.value;
+            //saveModel.releaseDate = propReleaseDate.value;
             saveModel.templateAlias = propTemplate.value;
 
             return saveModel;

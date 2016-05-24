@@ -173,20 +173,22 @@ namespace Umbraco.Web.Models.Mapping
                     Value = localizedText.UmbracoDictionaryTranslate(display.ContentTypeName),
                     View = PropertyEditorResolver.Current.GetByAlias(Constants.PropertyEditors.NoEditAlias).ValueEditor.View
                 },
-                new ContentPropertyDisplay
-                {
-                    Alias = string.Format("{0}releasedate", Constants.PropertyEditors.InternalGenericPropertiesPrefix),
-                    Label = localizedText.Localize("content/releaseDate"),
-                    Value = display.ReleaseDate.HasValue ? display.ReleaseDate.Value.ToIsoString() : null,
-                    View = "datepicker" //TODO: Hard coding this because the templatepicker doesn't necessarily need to be a resolvable (real) property editor
-                },
-                new ContentPropertyDisplay
-                {
-                    Alias = string.Format("{0}expiredate", Constants.PropertyEditors.InternalGenericPropertiesPrefix),
-                    Label = localizedText.Localize("content/unpublishDate"),
-                    Value = display.ExpireDate.HasValue ? display.ExpireDate.Value.ToIsoString() : null,
-                    View = "datepicker" //TODO: Hard coding this because the templatepicker doesn't necessarily need to be a resolvable (real) property editor
-                },
+                //Replaced with custom ATG.Moet.Cms.Plugins.MoetPublishDates.ReleaseDatePropertyEditor
+                //new ContentPropertyDisplay
+                //{
+                //    Alias = string.Format("{0}releasedate", Constants.PropertyEditors.InternalGenericPropertiesPrefix),
+                //    Label = localizedText.Localize("content/releaseDate"),
+                //    Value = display.ReleaseDate.HasValue ? display.ReleaseDate.Value.ToIsoString() : null,
+                //    View = "datepicker" //TODO: Hard coding this because the templatepicker doesn't necessarily need to be a resolvable (real) property editor
+                //},
+                //Replaced with custom ATG.Moet.Cms.Plugins.MoetPublishDates.ExpireDatePropertyEditor
+                //new ContentPropertyDisplay
+                //{
+                //    Alias = string.Format("{0}expiredate", Constants.PropertyEditors.InternalGenericPropertiesPrefix),
+                //    Label = localizedText.Localize("content/unpublishDate"),
+                //    Value = display.ExpireDate.HasValue ? display.ExpireDate.Value.ToIsoString() : null,
+                //    View = "datepicker" //TODO: Hard coding this because the templatepicker doesn't necessarily need to be a resolvable (real) property editor
+                //},
                 new ContentPropertyDisplay
                 {
                     Alias = string.Format("{0}template", Constants.PropertyEditors.InternalGenericPropertiesPrefix),
