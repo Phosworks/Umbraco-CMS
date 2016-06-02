@@ -24,7 +24,7 @@ namespace Umbraco.Core.Publishing
                 try
                 {
                     d.ReleaseDate = null;
-                    var result = _contentService.SaveAndPublishWithStatus(d, (int)d.GetWriterProfile().Id);
+                    var result = _contentService.SaveAndPublishWithStatus(d);
                     if (result.Success == false)
                     {
                         if (result.Exception != null)
@@ -48,7 +48,7 @@ namespace Umbraco.Core.Publishing
                 try
                 {
                     d.ExpireDate = null;
-                    _contentService.UnPublish(d, (int)d.GetWriterProfile().Id);
+                    _contentService.UnPublish(d);
                 }
                 catch (Exception ee)
                 {
