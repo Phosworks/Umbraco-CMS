@@ -128,6 +128,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATG.Moet.Social", "..\..\AT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATG.Moet.Models", "..\..\ATG.Moet.Models\ATG.Moet.Models.csproj", "{A04ED8B7-0329-4E81-B366-FEC04D277271}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATG.Moet.Cms.Owin", "..\..\ATG.Moet.Cms.Owin\ATG.Moet.Cms.Owin.csproj", "{393F4F38-5232-4528-A9B0-7B7178E5345B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -355,6 +357,16 @@ Global
 		{A04ED8B7-0329-4E81-B366-FEC04D277271}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A04ED8B7-0329-4E81-B366-FEC04D277271}.stage|Any CPU.ActiveCfg = stage|Any CPU
 		{A04ED8B7-0329-4E81-B366-FEC04D277271}.stage|Any CPU.Build.0 = stage|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.develop|Any CPU.ActiveCfg = Debug|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.develop|Any CPU.Build.0 = Debug|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.prod|Any CPU.ActiveCfg = Release|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.prod|Any CPU.Build.0 = Release|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.stage|Any CPU.ActiveCfg = Release|Any CPU
+		{393F4F38-5232-4528-A9B0-7B7178E5345B}.stage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
