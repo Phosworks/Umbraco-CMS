@@ -99,29 +99,8 @@ namespace Umbraco.Web.Models.Mapping
 
             if (customProperties != null)
             {
-                //add custom properties to Settings tab
-                var settingsTab = display.Tabs.FirstOrDefault( x => x.Alias == "Settings" );
-                var internalReleaseDate = customProperties.FirstOrDefault( x => x.Alias == string.Format( "{0}releasedate", Constants.PropertyEditors.InternalGenericPropertiesPrefix ) );
-                var internalExpireDate = customProperties.FirstOrDefault( x => x.Alias == string.Format( "{0}expiredate", Constants.PropertyEditors.InternalGenericPropertiesPrefix ) );
-                if (settingsTab != null)
-                {
-                    var settingsProps = settingsTab.Properties.ToArray();
-                    var newSettingsProps = new List<ContentPropertyDisplay>();
-                    newSettingsProps.AddRange( settingsProps.Where( x => x.Alias != "publishStatus" ) );
-                    if (internalReleaseDate != null)
-                    {
-                        newSettingsProps.Add( internalReleaseDate );
-                    }
-                    if (internalExpireDate != null)
-                    {
-                        newSettingsProps.Add( internalExpireDate );
-                    }
-                    newSettingsProps.AddRange( settingsProps.Where( x => x.Alias == "publishStatus" ) );
-                    //re-assign
-                    settingsTab.Properties = newSettingsProps;
-                }
-                //add the custom ones that is not added to Settings
-                contentProps.AddRange( customProperties.Where( x => settingsTab == null || !settingsTab.Properties.Contains( x ) ) );
+                //add the custom ones
+                contentProps.AddRange(customProperties);
             }
 
             //now add the user props

@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Web.UI", "Umbraco.Web.UI\Umbraco.Web.UI.csproj", "{4C4C194C-B5E4-4991-8F87-4373E24CC19F}"
 EndProject
@@ -118,6 +118,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATG.Moet.Common.FileCache", "..\..\ATG.Moet.Common.FileCache\ATG.Moet.Common.FileCache.csproj", "{DB04E27A-8E3A-4C90-B3E7-AC12AE0759EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATG.Moet.Social", "..\..\ATG.Moet.Social\ATG.Moet.Social.csproj", "{3BC4725A-FBAF-4AE7-8E6F-C9A5097B4C5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATG.Moet.Cms.Tests", "..\..\ATG.Moet.Cms.Tests\ATG.Moet.Cms.Tests.csproj", "{29B0B77F-301E-4EC9-B5B5-841F12280BE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -356,6 +358,16 @@ Global
 		{3BC4725A-FBAF-4AE7-8E6F-C9A5097B4C5C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3BC4725A-FBAF-4AE7-8E6F-C9A5097B4C5C}.stage|Any CPU.ActiveCfg = Release|Any CPU
 		{3BC4725A-FBAF-4AE7-8E6F-C9A5097B4C5C}.stage|Any CPU.Build.0 = Release|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.develop|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.develop|Any CPU.Build.0 = Debug|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.prod|Any CPU.ActiveCfg = Release|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.prod|Any CPU.Build.0 = Release|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.stage|Any CPU.ActiveCfg = Release|Any CPU
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1}.stage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -372,5 +384,6 @@ Global
 		{A04ED8B7-0329-4E81-B366-FEC04D277271} = {5DADA64F-9A90-46D8-9F5E-652E5024559E}
 		{DB04E27A-8E3A-4C90-B3E7-AC12AE0759EB} = {5DADA64F-9A90-46D8-9F5E-652E5024559E}
 		{3BC4725A-FBAF-4AE7-8E6F-C9A5097B4C5C} = {5DADA64F-9A90-46D8-9F5E-652E5024559E}
+		{29B0B77F-301E-4EC9-B5B5-841F12280BE1} = {5DADA64F-9A90-46D8-9F5E-652E5024559E}
 	EndGlobalSection
 EndGlobal

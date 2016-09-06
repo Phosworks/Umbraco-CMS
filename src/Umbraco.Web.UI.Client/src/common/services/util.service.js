@@ -614,14 +614,17 @@ function umbDataFormatter() {
             //this is basically the same as for media but we need to explicitly add some extra properties
             var saveModel = this.formatMediaPostData(displayModel, action);
 
-            var allProperties = _.flatten(_.pluck(displayModel.tabs, "properties"));
-            var propExpireDate = _.find(allProperties, function(item) {
+            var genericTab = _.find(displayModel.tabs, function (item) {
+                return item.id === 0;
+            });
+            
+            var propExpireDate = _.find(genericTab.properties, function(item) {
                 return item.alias === "_umb_expiredate";
             });
-            var propReleaseDate = _.find(allProperties, function (item) {
+            var propReleaseDate = _.find(genericTab.properties, function (item) {
                 return item.alias === "_umb_releasedate";
             });
-            var propTemplate = _.find(allProperties, function (item) {
+            var propTemplate = _.find(genericTab.properties, function (item) {
                 return item.alias === "_umb_template";
             });
             saveModel.expireDate = propExpireDate.value;
