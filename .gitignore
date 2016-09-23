@@ -67,6 +67,8 @@ src/packages/
 src/packages/repositories.config
 
 src/Umbraco.Web.UI/[Ww]eb.config
+src/Umbraco.Web.UI/applicationSettings
+src/ConfigTransforms/
 *.transformed
 webpihash.txt
 
