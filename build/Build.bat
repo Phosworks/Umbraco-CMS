@@ -72,11 +72,11 @@ ECHO Adding Web.config transform files to the NuGet package
 REN .\_BuildOutput\WebApp\Views\Web.config Web.config.transform
 REN .\_BuildOutput\WebApp\Xslt\Web.config Web.config.transform
 
-ECHO.
-ECHO Packing the NuGet release files
-..\src\.nuget\NuGet.exe Pack NuSpecs\UmbracoCms.Core.nuspec -Version %version% -Symbols -Verbosity quiet
-..\src\.nuget\NuGet.exe Pack NuSpecs\UmbracoCms.nuspec -Version %version% -Verbosity quiet
-IF ERRORLEVEL 1 GOTO :error
+rem ECHO.
+rem ECHO Packing the NuGet release files
+rem ..\src\.nuget\NuGet.exe Pack NuSpecs\UmbracoCms.Core.nuspec -Version %version% -Symbols -Verbosity quiet
+rem ..\src\.nuget\NuGet.exe Pack NuSpecs\UmbracoCms.nuspec -Version %version% -Verbosity quiet
+rem IF ERRORLEVEL 1 GOTO :error
 
 :success
 ECHO.
