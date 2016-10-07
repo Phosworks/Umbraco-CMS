@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <language alias="en" intName="English (UK)" localName="English (UK)" lcid="" culture="en-GB">
   <creator>
     <name>The Umbraco community</name>
@@ -1434,4 +1434,6 @@ To manage your website, simply open the Umbraco back office and start adding con
     <key alias="enabledConfirm">URL tracker has now been enabled.</key>
     <key alias="enableError">Error enabling the URL tracker, more information can be found in your log file.</key>
   </area>
+  <key alias="transferCourierRevision">Transfer</key>
+  <key alias="transferCourierItem">Transfer</key>
 </language>
