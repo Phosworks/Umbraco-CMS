@@ -646,6 +646,7 @@
     <Content Include="Config\Lang\ru-RU.user.xml" />
     <Content Include="Config\Lang\sv-SE.user.xml" />
     <Content Include="Config\Lang\zh-CN.user.xml" />
+    <Content Include="debug\routes.aspx" />
     <Content Include="Umbraco\Config\Lang\cs.xml" />
     <Content Include="Umbraco\Install\Legacy\loadStarterKits.ascx" />
     <Content Include="Umbraco\ClientRedirect.aspx" />
