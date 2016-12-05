@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <language>
-    <area alias="sections">
-        <key alias="MoetSchedules">Overview</key>
-    </area>
+  <area alias="sections">
+    <key alias="MoetSchedules">Overview</key>
+    <key alias="MoetReleaseManager">Release</key>
+  </area>
 </language>
