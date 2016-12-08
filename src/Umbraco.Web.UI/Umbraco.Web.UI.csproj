@@ -111,6 +111,9 @@
       <Project>{07fbc26b-2927-4a22-8d96-d644c667fecc}</Project>
       <Name>UmbracoExamine</Name>
     </ProjectReference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\..\external\Courier\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
       <Private>True</Private>
@@ -118,6 +121,9 @@
     <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\..\external\Courier\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="ClientDependency.Core, Version=1.9.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ClientDependency.1.9.2\lib\net45\ClientDependency.Core.dll</HintPath>
@@ -135,9 +141,15 @@
       <HintPath>..\packages\Examine.0.1.70.0\lib\Examine.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\..\external\Courier\FluentNHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\..\external\Courier\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="ImageProcessor, Version=2.4.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ImageProcessor.2.4.5.0\lib\net45\ImageProcessor.dll</HintPath>
@@ -207,6 +219,12 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\external\Courier\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\..\..\external\Courier\NHibernate.ByteCode.Castle.dll</HintPath>
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -351,6 +369,35 @@
       <Name>umbraco.providers</Name>
     </ProjectReference>
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="Umbraco.Courier.Core, Version=1.2.5210.19573, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\external\Courier\Umbraco.Courier.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Courier.DataResolvers">
+      <HintPath>..\..\..\external\Courier\Umbraco.Courier.DataResolvers.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Courier.EventHandlers.V7">
+      <HintPath>..\..\..\external\Courier\Umbraco.Courier.EventHandlers.V7.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Courier.Persistence">
+      <HintPath>..\..\..\external\Courier\Umbraco.Courier.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Courier.Persistence.V7.NHibernate">
+      <HintPath>..\..\..\external\Courier\Umbraco.Courier.Persistence.V7.NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Courier.Providers">
+      <HintPath>..\..\..\external\Courier\Umbraco.Courier.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Courier.RepositoryProviders">
+      <HintPath>..\..\..\external\Courier\Umbraco.Courier.RepositoryProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Courier.UI">
+      <HintPath>..\..\..\external\Courier\Umbraco.Courier.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Licensing, Version=2.0.33.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\external\Courier\Umbraco.Licensing.dll</HintPath>
+    </Reference>
     <Reference Include="Umbraco.ModelsBuilder, Version=3.0.5.96, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Umbraco.ModelsBuilder.3.0.5\lib\Umbraco.ModelsBuilder.dll</HintPath>
       <Private>True</Private>
@@ -602,11 +649,95 @@
     <Content Include="Config\Lang\sv-SE.user.xml" />
     <Content Include="Config\Lang\zh-CN.user.xml" />
     <Content Include="debug\routes.aspx" />
+    <Content Include="sql\install\create.sql" />
+    <Content Include="sql\install\createMySQL.sql" />
+    <Content Include="sql\install\createSQLCE.sql" />
+    <Content Include="sql\uninstall\uninstall.sql" />
     <Content Include="Umbraco\Config\Lang\cs.xml" />
     <Content Include="Umbraco\Install\Legacy\loadStarterKits.ascx" />
     <Content Include="Umbraco\ClientRedirect.aspx" />
     <Content Include="Umbraco\create.aspx" />
     <Content Include="Umbraco\Logout.aspx" />
+    <Content Include="Umbraco\Plugins\courier\CompareRevision.aspx" />
+    <Content Include="Umbraco\Plugins\courier\css\dialogs.css" />
+    <Content Include="Umbraco\Plugins\courier\css\icons.gif" />
+    <Content Include="Umbraco\Plugins\courier\css\img\complete.png" />
+    <Content Include="Umbraco\Plugins\courier\css\img\error.png" />
+    <Content Include="Umbraco\Plugins\courier\css\img\pending.png" />
+    <Content Include="Umbraco\Plugins\courier\css\img\running.gif" />
+    <Content Include="Umbraco\Plugins\courier\css\img\x.png" />
+    <Content Include="Umbraco\Plugins\courier\css\loading.gif" />
+    <Content Include="Umbraco\Plugins\courier\css\pages.css" />
+    <Content Include="Umbraco\Plugins\courier\css\style.css" />
+    <Content Include="Umbraco\Plugins\courier\dashboard\CourierDashboard.ascx" />
+    <Content Include="Umbraco\Plugins\courier\dialogs\addItemsToLocalRevision.aspx" />
+    <Content Include="Umbraco\Plugins\courier\dialogs\CommitItem.aspx" />
+    <Content Include="Umbraco\Plugins\courier\dialogs\transferItem.aspx" />
+    <Content Include="Umbraco\Plugins\courier\dialogs\transferRevision.aspx" />
+    <Content Include="Umbraco\Plugins\courier\dialogs\UpdateItem.aspx" />
+    <Content Include="Umbraco\Plugins\courier\editCourierProviderAccess.aspx" />
+    <Content Include="Umbraco\Plugins\courier\editCourierSecurity.aspx" />
+    <Content Include="Umbraco\Plugins\courier\editLocalRevision.aspx" />
+    <Content Include="Umbraco\Plugins\courier\editRemoteRevision.aspx" />
+    <Content Include="Umbraco\Plugins\courier\editRepository.aspx" />
+    <Content Include="Umbraco\Plugins\courier\feedproxy.aspx" />
+    <Content Include="Umbraco\Plugins\courier\images\bug.gif" />
+    <Content Include="Umbraco\Plugins\courier\images\courier.jpg" />
+    <Content Include="Umbraco\Plugins\courier\images\Courier.png" />
+    <Content Include="Umbraco\Plugins\courier\images\deploy.gif" />
+    <Content Include="Umbraco\Plugins\courier\images\edit.png" />
+    <Content Include="Umbraco\Plugins\courier\images\error.png" />
+    <Content Include="Umbraco\Plugins\courier\images\extract.png" />
+    <Content Include="Umbraco\Plugins\courier\images\icon_form.gif" />
+    <Content Include="Umbraco\Plugins\courier\images\install.png" />
+    <Content Include="Umbraco\Plugins\courier\images\loading.gif" />
+    <Content Include="Umbraco\Plugins\courier\images\ok.png" />
+    <Content Include="Umbraco\Plugins\courier\images\package.gif" />
+    <Content Include="Umbraco\Plugins\courier\images\package_all.gif" />
+    <Content Include="Umbraco\Plugins\courier\images\package_selection.gif" />
+    <Content Include="Umbraco\Plugins\courier\images\transfer.gif" />
+    <Content Include="Umbraco\Plugins\courier\images\transfer.png" />
+    <Content Include="Umbraco\Plugins\courier\images\warning.png" />
+    <Content Include="Umbraco\Plugins\courier\License.aspx" />
+    <Content Include="Umbraco\Plugins\courier\LicenseError.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\CompareRevision.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\editCourierProviderAccess.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\editCourierSecurity.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\editLocalRevision.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\editRemoteRevision.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\editRepository.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\feedproxy.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\License.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\LicenseError.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\SimpleLocations.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\SimpleRevisionDeploy.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\simpleRevisionDeploy_broken.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\ViewRepositories.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\ViewRevisionDetails.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\ViewRevisions.aspx" />
+    <Content Include="Umbraco\Plugins\courier\pages\ViewTaskManager.aspx" />
+    <Content Include="Umbraco\Plugins\courier\scripts\courier.js" />
+    <Content Include="Umbraco\Plugins\courier\scripts\jquery-ui.custom.min.js" />
+    <Content Include="Umbraco\Plugins\courier\scripts\jquery.dynatree.min.js" />
+    <Content Include="Umbraco\Plugins\courier\scripts\jquery.simplemodal-1.2.3.js" />
+    <Content Include="Umbraco\Plugins\courier\scripts\RevisionCompare.js" />
+    <Content Include="Umbraco\Plugins\courier\scripts\RevisionDetails.js" />
+    <Content Include="Umbraco\Plugins\courier\scripts\RevisionJsonRender.js" />
+    <Content Include="Umbraco\Plugins\courier\SimpleLocations.aspx" />
+    <Content Include="Umbraco\Plugins\courier\SimpleRevisionDeploy.aspx" />
+    <Content Include="Umbraco\Plugins\courier\simpleRevisionDeploy_broken.aspx" />
+    <Content Include="Umbraco\Plugins\courier\usercontrols\DependencySelector.ascx" />
+    <Content Include="Umbraco\Plugins\courier\usercontrols\Installer.ascx" />
+    <Content Include="Umbraco\Plugins\courier\usercontrols\ProviderSecurity.ascx" />
+    <Content Include="Umbraco\Plugins\courier\usercontrols\RevisionContentsOverview.ascx" />
+    <Content Include="Umbraco\Plugins\courier\usercontrols\SystemItemSelector.ascx" />
+    <Content Include="Umbraco\Plugins\courier\usercontrols\test.ascx" />
+    <Content Include="Umbraco\Plugins\courier\ViewRepositories.aspx" />
+    <Content Include="Umbraco\Plugins\courier\ViewRevisionDetails.aspx" />
+    <Content Include="Umbraco\Plugins\courier\ViewRevisions.aspx" />
+    <Content Include="Umbraco\Plugins\courier\ViewTaskManager.aspx" />
+    <Content Include="Umbraco\Plugins\courier\webservices\Courier.asmx" />
+    <Content Include="Umbraco\Plugins\courier\webservices\Repository.asmx" />
     <Content Include="Umbraco\umbraco.aspx" />
     <Content Include="Umbraco_Client\Application\JQuery\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Umbraco_Client\IconPicker\iconpicker.js" />
@@ -1980,6 +2111,9 @@
     <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
+    <Content Include="Umbraco\Plugins\courier\masterpages\CourierDialog.Master" />
+    <Content Include="Umbraco\Plugins\courier\masterpages\CourierPage.Master" />
+    <Content Include="Umbraco\Plugins\courier\webservices\TreeData.ashx" />
     <None Include="Web.Debug.config.transformed" />
     <None Include="web.Template.Debug.config">
       <DependentUpon>Web.Template.config</DependentUpon>
