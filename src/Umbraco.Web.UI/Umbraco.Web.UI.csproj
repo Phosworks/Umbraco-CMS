@@ -103,6 +103,10 @@
     <IntermediateOutputPath>..\bin\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\ATG.Moet.Cms.Plugins\ATG.Moet.Cms.Plugins.csproj">
+      <Project>{358082d3-4f2f-4f84-b295-1888e5207337}</Project>
+      <Name>ATG.Moet.Cms.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UmbracoExamine\UmbracoExamine.csproj">
       <Project>{07fbc26b-2927-4a22-8d96-d644c667fecc}</Project>
       <Name>UmbracoExamine</Name>
@@ -2430,8 +2434,7 @@ xcopy "$(ProjectDir)"..\packages\SqlServerCE.4.0.0.1\x86\*.* "$(TargetDir)x86\" 
   <Import Project="$(MSBuildProjectDirectory)\..\umbraco.presentation.targets" Condition="$(BuildingInsideVisualStudio) != true" />
   <Import Project="$(SolutionDir)umbraco.presentation.targets" Condition="$(BuildingInsideVisualStudio) == true" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy $(ProjectDir)Web.config $(SolutionDir)ConfigTransforms\ /Y</PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <Target Name="BeforeBuild">
