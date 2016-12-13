@@ -787,6 +787,10 @@
     <None Include="Config\BaseRestExtensions.Release.config">
       <DependentUpon>BaseRestExtensions.config</DependentUpon>
     </None>
+    <Content Include="Config\courier.config" />
+    <None Include="Config\courier.Release.config">
+      <DependentUpon>courier.config</DependentUpon>
+    </None>
     <None Include="Config\log4net.Release.config">
       <DependentUpon>log4net.config</DependentUpon>
     </None>
